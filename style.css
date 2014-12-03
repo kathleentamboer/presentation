@@ -27,7 +27,8 @@ img {
 }
 
 html, body {
-
+  height: 100%;
+  position: relative;
 }
 
 .container {
@@ -46,7 +47,7 @@ html, body {
   align-items: center;
   justify-content: center;
   z-index: 5;
-  height: 650px;
+  height: 100%;
 }
 
 .page img {
@@ -55,41 +56,41 @@ html, body {
 }
 
 .stuff {
-  margin: 10% auto;
+  margin: 0 auto;
   width: 600px;
 }
 
-iframe {
-  width: 400px;
-}
 .blue {
   color: white;
   background: blue;
-  margin-top: 20px;
-  text-transform: uppercase;
-  padding: 5px;
-  z-index: 10;
 }
 
 .green {
   background: #3F98FF;
   color: white;
-  margin-top: 20px;
-  text-transform: capitalize;
-  padding: 5px;
+}
+
+.blue-block {
+  color: white;
+  background: blue;
+  padding: 0 15px 5px 15px;
+  margin-top: 15px;
+}
+
+.green-block {
+  background: #3F98FF;
+  color: white;
+  padding: 0 15px 5px 15px;
+  margin-top: 15px;
 }
 
 .pink {
   background: magenta;
   color: white;
-  margin-top: 20px;
-  padding: 5px;
+  padding: 0 15px 10px 15px;
+  margin-top: 15px;
 }
 
-.figure {
-  background-image: url("iphone6.jpeg");
-  background-size: cover;
-}
 footer {
   position: fixed;
   right: 50px;

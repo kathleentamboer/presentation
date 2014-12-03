@@ -9,7 +9,7 @@
   <body>
     <main class="container">
 
-      <section class="page group">
+      <section class="page group" id="1">
         <div class="stuff">
           <ol>
             <li>Kathleen Tamboer</li>
@@ -20,80 +20,107 @@
         </div>
       </section>
 
-      <section class="page group">
+      <section class="page group" id="2">
         <div class="stuff">
           <h1>2 Projects</h1>
           <ol>
-            <li class="blue">Nice Numbers</li>
-            <li class="green">Boek der Boeken</li>
+            <li class="blue-block">Nice Numbers</li>
+            <li class="green-block">Boek der Boeken</li>
           </ol>
         </div>
       </section>
 
-    <div class="blue">
-      <section class="page group">
+      <section class="page group blue" id="3">
         <div class="stuff">
           <p>Nice Numbers is an app that calculates your tip and total amount.</p>
         </div>
       </section>
 
-      <section class="page group">
+      <section class="page group blue"id="4">
         <div class="stuff">
-          <img src="numberwire.png" alt="flow">
+          <img src="numberwire.jpg" alt="flow">
         </div>
       </section>
 
-      <section class="page group">
+      <section class="page group blue" id="5">
         <div class="stuff">
           <img src="inspiration.png" alt="inspiration">
         </div>
       </section>
 
-      <section class="page group">
+      <section class="page group blue" id="6">
         <div class="stuff">
-          <a href="http://kathleentamboer.com/tip-calculator-app"><img src="tipapp.png" alt="book-app"></a>
+          <a href="http://kathleentamboer.com/tip-calculator-app" target="new"><img src="tip-calculator-app.jpg" alt="book-app"></a>
         </div>
       </section>
-    </div>
-    </div>
 
-    <div class="green">
-      <section class="page group">
+      <section class="page group green" id="7">
         <div class="stuff">
           <p>Boek Der Boeken is a web app that catalogues all the books you own.</p>
         </div>
       </section>
 
-      <section class="page group">
+      <section class="page group green" id="8">
         <div class="stuff">
           <img src="bookflow.png" alt="flow">
         </div>
       </section>
 
-      <section class="page group">
+      <section class="page group green" id="9">
         <div class="stuff">
           <img src="bookwire.png" alt="inspiration">
         </div>
       </section>
 
-      <section class="page group">
+      <section class="page group green" id="10">
         <div class="stuff">
-          <a href="http://kathleentamboer.com/book-collection-app"><img src="bookapp.png" alt="book-app"></a>
+          <a href="http://kathleentamboer.com/book-collection-app"><img src="bookapp.jpg" alt="book-app"></a>
         </div>
       </section>
-    </div>
 
-      <section class="page group">
+      <section class="page group" id="11">
         <div class="stuff">
           <h1>Thank you!</h1>
-          <h1>Please come talk to me after the presentations.<br>: )</h1>
+          <h1>Please come talk to me after the presentations.</h1>
         </div>
       </section>
 
       <footer>
-        1/10
+        1/11
       </footer>
 
     </main>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+    <script>
+      $(document).on("ready", function(){
+        var page = 1;
+        var total = 11;
+
+        $(window).on("keypress", function(event){
+          console.log(event);
+
+          if (event.keyCode == 32){
+            event.preventDefault();
+            console.log("spacebar");
+            if (page == total){
+              page = 1;
+            } else {
+              page = page + 1;
+            }
+            window.location.hash = "#" + page;
+
+            $("footer").html(page + "/" + total);
+
+          }
+        });
+
+
+      });
+
+    </script>
+
   </body>
 </html>
